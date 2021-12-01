@@ -10,6 +10,7 @@ keywords = ["Causal Inference", "Jax", "Machine Learning"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+jax = "^0.2.25"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2"
