@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "caujax"
-version = "0.1.0"
+version = "0.1.1"
 description = "Causal Jax"
 authors = ["Jeong-Yoon Lee <jeongyoon.lee1@gmail.com>"]
 license = "Apache-2.0"
