@@ -3,13 +3,44 @@ name = "caujax"
 version = "0.1.0"
 description = "Causal Jax"
 authors = ["Jeong-Yoon Lee <jeongyoon.lee1@gmail.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/caujax/caujax"
+keywords = ["Causal Inference", "Jax", "Machine Learning"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2"
+pytest = "^6.2"
+tox = "^3.24"
+flake8 = "^4.0.1"
+black = {version = "^21.11b1", allow-prereleases = true}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 140
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+  | foo.py           # also separately exclude a file named foo.py in
+                     # the root of the project
+)
+'''
